@@ -1,0 +1,110 @@
+.reservation {
+  background-color: #f6f6f6;
+  margin-top: -27px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 50px;
+
+    h1, p {
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 39px;
+      padding-top: 50px;
+    }
+
+    p {
+      font-size: 23px;
+      font-weight: 300;
+    }
+}
+
+.functioning {
+    margin: 30px;
+
+      &__container {
+        display: flex;
+        flex-direction: column;
+      }
+
+      &__card {
+        display: flex;
+        align-items: center;
+        border-radius: 30px;
+        padding: 15px 0 15px 20px;
+        background-color: #f6f6f6;
+        margin-bottom: 30px;
+        font-size: 20px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+        &:hover{
+          background-color: #9356DC;
+        }
+
+          &__number{
+            width: 30px;
+            height: 30px;
+            border-radius: 15px;
+            background-color: #9356DC;
+            color: white;
+            position: relative;
+            left: -30px;
+            top: 5px;
+            font-size: 18px;
+            text-align: center;
+            padding-top: 7px;
+          }
+
+        i {
+          padding-right: 40px;
+          font-size: 27px;
+          color: darkgrey;
+        }
+      }
+}
+
+.restaurants {
+
+  background-color: #f6f6f6;
+  padding: 40px 20px 0 20px;
+
+    &__card {
+      background-color: white;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+      transition: 0.3s;
+      border-radius: 25px;
+      margin-bottom: 30px;
+
+        img {
+          width: 100%;
+          border-radius: 20px 20px 0 0;
+          height: 225px;
+          object-fit: cover;
+          object-position: bottom;
+      }
+    }
+}
+
+.restaurants__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+
+    p, h3 {
+      margin: 5px;
+    }
+
+    h3 {
+      font-size: 22px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+    i {
+      font-size: 30px;
+    }
+}

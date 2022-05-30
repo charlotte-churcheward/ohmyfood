@@ -1,0 +1,34 @@
+footer {
+  background-color: #353535;
+  padding: 20px;
+  color: white;
+
+    p {
+    font-family: "Shrikhand", sans-serif, serif;
+    font-size: 22px;
+    }
+
+    img {
+      width: 120px;
+    }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+
+    li {
+      margin-bottom: 5px;
+    }
+  }
+
+  .fa-utensils {
+    font-size: 14px;
+    padding-right: 15px;
+  }
+
+  .fa-handshake-angle {
+    font-size: 10px;
+    padding-right: 15px;
+  }
+}

@@ -1,0 +1,7 @@
+@mixin d-flex {
+  display: flex;
+}
+
+@mixin button-colour ($color: $color-primary) {
+  background: $color lighten($color, 10%);
+}

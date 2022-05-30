@@ -1,0 +1,54 @@
+.menu {
+  background-color: #eaeaea;
+  border-radius: 40px 40px 0 0;
+  position: relative;
+  bottom: 66px;
+  padding: 40px 20px;
+
+  &__restaurant {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+
+    h1 {
+      margin: 0;
+      font-size: 37px;
+    }
+
+    .fa-heart {
+      font-size: 30px;
+      padding-right: 30px;
+    }
+  }
+
+  &__courses {
+    margin-bottom: 60px;
+  }
+
+  &__title {
+    width: 60px;
+    border-bottom: 4px solid #99E2D0;
+    margin-bottom: 20px;
+
+    h2 {
+      font-weight: 300;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__card {
+    border-radius: 20px;
+    padding: 10px;
+    background-color: white;
+    margin-bottom: 20px;
+    font-size: 20px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+
+    h3, p {
+      margin: 10px;
+    }
+  }
+}

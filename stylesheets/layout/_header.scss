@@ -1,18 +1,38 @@
-.nav {
-  @media screen and (max-width: 500px) {
-    &__logo {
+@media screen and (max-width: 500px) {
+
+nav {
+  padding-top: 30px;
+}
+
+  .fa-arrow-left {
+    font-size: 30px;
+    float: left;
+  }
+
+    .logo {
       text-align: center;
-      padding-top: 30px;
       padding-bottom: 10px;
 
       img{
-        width: 250px;
+        width: 240px;
       }
     }
-    &__location {
-      background-color: lightgrey;
-      height: 50px;
+
+    .location {
+      background-color: #eaeaea;
       text-align: center;
+      padding: 20px;
+
+      span {
+        padding: 15px;
+        font-size: 18px;
+      }
     }
-  }
-}
+
+  .banner {
+    img {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+    }
+  }}
