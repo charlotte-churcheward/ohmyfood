@@ -1,38 +1,38 @@
-@media screen and (max-width: 500px) {
-
 nav {
-  padding-top: 30px;
-}
+  padding: 25px 0 10px 0;
+  text-align: center;
 
-  .fa-arrow-left {
-    font-size: 30px;
-    float: left;
-  }
+    img {
+      width: 170px;
+    }
 
-    .logo {
-      text-align: center;
-      padding-bottom: 10px;
-
-      img{
-        width: 240px;
+    .fa-arrow-left {
+      font-size: 20px;
+      position: absolute;
+      left: 20px;
       }
     }
 
     .location {
+      margin-top: 10px;
       background-color: #eaeaea;
       text-align: center;
-      padding: 20px;
+      padding: 15px;
 
-      span {
-        padding: 15px;
-        font-size: 18px;
+      input {
+        outline: none;
+        background-color: #eaeaea;
+        border: none;
+        text-align: center;
+        width: 145px;
       }
-    }
+      }
 
   .banner {
     img {
-      width: 100%;
-      height: 360px;
+      width: 105%;
       object-fit: cover;
+      margin-bottom: -50px;
+      height: 250px;
     }
-  }}
+  }

@@ -1,15 +1,10 @@
 footer {
   background-color: #353535;
-  padding: 20px;
+  padding: 10px 0 15px 20px;
   color: white;
 
     p {
     font-family: "Shrikhand", sans-serif, serif;
-    font-size: 22px;
-    }
-
-    img {
-      width: 120px;
     }
 
   ul {
@@ -20,15 +15,19 @@ footer {
     li {
       margin-bottom: 5px;
     }
+
+    li > a {
+      color: white;
+    }
   }
 
   .fa-utensils {
     font-size: 14px;
-    padding-right: 15px;
+    padding-right: 13px;
   }
 
   .fa-handshake-angle {
     font-size: 10px;
-    padding-right: 15px;
+    padding-right: 12px;
   }
 }
