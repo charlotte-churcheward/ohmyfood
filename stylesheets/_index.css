@@ -348,8 +348,8 @@ a {
   color: black;
 }
 
-.fa-heart {
-  font-weight: 100;
+h1 {
+  font-size: 28px;
 }
 
 ul {
@@ -358,6 +358,28 @@ ul {
 
 strong {
   float: right;
+}
+
+.fa-heart {
+  position: relative;
+  z-index: 1;
+  cursor: pointer;
+}
+.fa-heart:hover::after {
+  opacity: 1;
+}
+.fa-heart::after {
+  content: "\f004";
+  font-weight: 600;
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 350ms ease-in 150ms;
+  background-image: linear-gradient(25deg, #ff79da, #9356dc);
+  background-clip: text;
+  color: transparent;
 }
 
 .d-flex {
@@ -374,15 +396,11 @@ strong {
 
 footer {
   background-color: #353535;
-  padding: 20px;
+  padding: 10px 0 15px 20px;
   color: white;
 }
 footer p {
   font-family: "Shrikhand", sans-serif, serif;
-  font-size: 22px;
-}
-footer img {
-  width: 120px;
 }
 footer ul {
   display: flex;
@@ -392,117 +410,113 @@ footer ul {
 footer ul li {
   margin-bottom: 5px;
 }
+footer ul li > a {
+  color: white;
+}
 footer .fa-utensils {
   font-size: 14px;
-  padding-right: 15px;
+  padding-right: 13px;
 }
 footer .fa-handshake-angle {
   font-size: 10px;
-  padding-right: 15px;
+  padding-right: 12px;
 }
 
-@media screen and (max-width: 500px) {
-  nav {
-    padding-top: 30px;
-  }
-
-  .fa-arrow-left {
-    font-size: 30px;
-    float: left;
-  }
-
-  .logo {
-    text-align: center;
-    padding-bottom: 10px;
-  }
-  .logo img {
-    width: 240px;
-  }
-
-  .location {
-    background-color: #eaeaea;
-    text-align: center;
-    padding: 20px;
-  }
-  .location span {
-    padding: 15px;
-    font-size: 18px;
-  }
-
-  .banner img {
-    width: 100%;
-    height: 360px;
-    object-fit: cover;
-  }
+nav {
+  padding: 25px 0 10px 0;
+  text-align: center;
 }
+nav img {
+  width: 170px;
+}
+nav .fa-arrow-left {
+  font-size: 20px;
+  position: absolute;
+  left: 20px;
+}
+
+.location {
+  margin-top: 10px;
+  background-color: #eaeaea;
+  text-align: center;
+  padding: 15px;
+}
+.location input {
+  outline: none;
+  background-color: #eaeaea;
+  border: none;
+  text-align: center;
+  width: 145px;
+}
+
+.banner img {
+  width: 105%;
+  object-fit: cover;
+  margin-bottom: -50px;
+  height: 250px;
+}
+
 button {
   background: linear-gradient(#FF79DA, #9356DC);
   border-radius: 30px;
   border: none;
   color: white;
-  padding: 20px;
+  padding: 15px 20px 15px 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3);
-  margin: 40px auto;
+  margin: 30px auto;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  transition: opacity 300ms;
+}
+button:hover {
+  opacity: 0.9;
 }
 
 .menu__button {
-  padding-right: 70px;
-  padding-left: 70px;
-}
-
-.restaurants__insert {
-  width: 90px;
-  border-radius: 5px;
-  background-color: #99E2D0;
-  color: #008766;
-  text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  position: absolute;
+  padding-right: 50px;
+  padding-left: 50px;
 }
 
 .reservation {
   background-color: #f6f6f6;
-  margin-top: -27px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 50px;
+  margin-top: -30px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 25px;
 }
 .reservation h1, .reservation p {
   text-align: center;
 }
 .reservation h1 {
-  font-size: 39px;
-  padding-top: 50px;
+  padding-top: 35px;
+  font-size: 24px;
 }
 .reservation p {
-  font-size: 23px;
   font-weight: 300;
+  font-size: 15px;
 }
 
-.functioning {
-  margin: 30px;
-}
 .functioning__container {
   display: flex;
   flex-direction: column;
+  margin: 20px 20px 30px 20px;
+}
+.functioning__container h2 {
+  margin-bottom: 30px;
 }
 .functioning__card {
   display: flex;
   align-items: center;
-  border-radius: 30px;
-  padding: 15px 0 15px 20px;
+  border-radius: 25px;
+  padding: 10px 0 10px 0;
   background-color: #f6f6f6;
   margin-bottom: 30px;
-  font-size: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 .functioning__card:hover {
-  background-color: #9356DC;
+  background-color: rgba(147, 86, 220, 0.2);
 }
 .functioning__card__number {
   width: 30px;
@@ -510,63 +524,73 @@ button {
   border-radius: 15px;
   background-color: #9356DC;
   color: white;
-  position: relative;
-  left: -30px;
-  top: 5px;
-  font-size: 18px;
   text-align: center;
-  padding-top: 7px;
+  padding-top: 6px;
+  margin-left: -13px;
 }
 .functioning__card i {
-  padding-right: 40px;
-  font-size: 27px;
-  color: darkgrey;
+  padding-right: 25px;
+  padding-left: 20px;
+  font-size: 18px;
+  color: #7e7e7e;
+}
+.functioning__card i:hover {
+  color: #9356DC;
+}
+.functioning__card p {
+  font-weight: bold;
+  font-size: 15px;
 }
 
 .restaurants {
   background-color: #f6f6f6;
-  padding: 40px 20px 0 20px;
+  padding: 40px 20px 40px 20px;
 }
 .restaurants__card {
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
-  transition: 0.3s;
-  border-radius: 25px;
-  margin-bottom: 30px;
+  border-radius: 15px;
+  margin-bottom: 20px;
 }
 .restaurants__card img {
   width: 100%;
-  border-radius: 20px 20px 0 0;
-  height: 225px;
+  border-radius: 15px 15px 0 0;
+  height: 160px;
   object-fit: cover;
   object-position: bottom;
 }
-
 .restaurants__content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px;
+  padding: 5px 25px 10px 10px;
+}
+.restaurants__content h3 {
+  font-size: 18px;
 }
 .restaurants__content p, .restaurants__content h3 {
   margin: 5px;
 }
-.restaurants__content h3 {
+.restaurants__content i {
   font-size: 22px;
 }
-.restaurants__content p {
-  font-size: 20px;
-}
-.restaurants__content i {
-  font-size: 30px;
+.restaurants__insert {
+  border-radius: 3px;
+  background-color: #99E2D0;
+  color: #008766;
+  text-align: center;
+  padding: 6px 10px;
+  position: absolute;
+  right: 20px;
+  margin: 15px;
+  font-size: 14px;
 }
 
 .menu {
   background-color: #eaeaea;
   border-radius: 40px 40px 0 0;
   position: relative;
-  bottom: 66px;
-  padding: 40px 20px;
+  padding: 40px 15px;
 }
 .menu__restaurant {
   display: flex;
@@ -575,36 +599,120 @@ button {
   padding-bottom: 20px;
 }
 .menu__restaurant h1 {
-  margin: 0;
-  font-size: 37px;
+  margin: 0 0 0 5px;
+  font-size: 26px;
 }
 .menu__restaurant .fa-heart {
-  font-size: 30px;
-  padding-right: 30px;
+  font-size: 23px;
+  padding-right: 20px;
 }
 .menu__courses {
-  margin-bottom: 60px;
+  margin-bottom: 45px;
 }
 .menu__title {
-  width: 60px;
-  border-bottom: 4px solid #99E2D0;
-  margin-bottom: 20px;
+  width: 45px;
+  border-bottom: 3px solid #99E2D0;
+  margin-bottom: 15px;
+  margin-left: 5px;
 }
 .menu__title h2 {
   font-weight: 300;
   text-transform: uppercase;
-  margin-bottom: 10px;
+  margin-bottom: 5px;
+  font-size: 16px;
 }
 .menu__card {
-  border-radius: 20px;
-  padding: 10px;
+  display: flex;
+  align-items: center;
+  height: 65px;
+  border-radius: 15px;
   background-color: white;
-  margin-bottom: 20px;
-  font-size: 20px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin-bottom: 15px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  animation: loading-cards 1700ms;
+  animation-fill-mode: backwards;
 }
-.menu__card h3, .menu__card p {
-  margin: 10px;
+@keyframes loading-cards {
+  0% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+.menu__card--check {
+  display: flex;
+  justify-content: center;
+  color: white;
+  font-size: 22px;
+  height: 65px;
+  width: 0;
+  border-radius: 0 15px 15px 0;
+  background-color: #99E2D0;
+  align-items: center;
+  overflow: hidden;
+  transition: all 1250ms ease-out;
+  opacity: 0;
+  transform-origin: right;
+}
+.menu__card:hover .menu__card--check {
+  width: 75px;
+  opacity: 1;
+}
+.menu__card:hover i {
+  transition: transform 1500ms;
+  transform: rotate(360deg);
+}
+.menu__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  transition-duration: 800ms;
+  margin: 5px;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.menu__content h3, .menu__content p {
+  margin: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu__content h3 {
+  font-size: 17px;
+}
+.menu__content p {
+  font-size: 14px;
+}
+.menu__text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.menu__price {
+  font-weight: bold;
+  padding-right: 10px;
+}
+.menu__price p {
+  margin-bottom: 5px;
+}
+
+.card1 {
+  animation-delay: 150ms;
+}
+
+.card2 {
+  animation-delay: 300ms;
+}
+
+.card3 {
+  animation-delay: 450ms;
+}
+
+.card4 {
+  animation-delay: 600ms;
 }
 
 /*# sourceMappingURL=_index.css.map */
