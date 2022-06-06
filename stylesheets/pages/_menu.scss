@@ -2,13 +2,24 @@
   background-color: #eaeaea;
   border-radius: 40px 40px 0 0;
   position: relative;
-  padding: 40px 15px;
+  padding: 40px;
+
+  @media screen and (max-width: 600px) {
+    padding: 40px 15px;
+  }
 
   &__restaurant {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
+    gap: 20px;
+
+    @media screen and (max-width: 600px) {
+      justify-content: space-between;
+      gap: 0;
+      padding-bottom: 20px;
+    }
 
     h1 {
       margin: 0 0 0 5px;
@@ -17,16 +28,29 @@
 
     .fa-heart {
       font-size: 23px;
-      padding-right: 20px;
+      margin-right: 20px;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+
+    @media screen and (max-width: 1220px) {
+      flex-direction: column;
+      gap: 15px;
     }
   }
 
   &__courses {
-    margin-bottom: 45px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
   }
 
   &__title {
-    width: 45px;
+    width: 40px;
     border-bottom: 3px solid #99E2D0;
     margin-bottom: 15px;
     margin-left: 5px;
@@ -74,18 +98,16 @@
       background-color: #99E2D0;
       align-items: center;
       overflow: hidden;
-      transition: all 1250ms ease-out;
-      opacity: 0;
+      transition: width 600ms;
       transform-origin: right;
     }
 
     &:hover .menu__card--check {
       width: 75px;
-      opacity: 1;
     }
 
       &:hover i {
-        transition: transform 1500ms;
+        transition: transform 600ms;
         transform: rotate(360deg);
       }
     }
@@ -107,11 +129,12 @@
     }
 
     h3 {
-      font-size: 17px;
+      font-size: 18px;
     }
 
     p {
-      font-size: 14px;
+      font-size: 15px;
+      font-weight: 300;
     }
 
 
@@ -123,11 +146,11 @@
   }
 
   &__price {
-    font-weight: bold;
     padding-right: 10px;
 
       p {
         margin-bottom: 5px;
+        font-weight: bold;
       }
 
   }

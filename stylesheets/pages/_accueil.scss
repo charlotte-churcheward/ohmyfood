@@ -11,24 +11,43 @@
 
     h1 {
       padding-top: 35px;
-      font-size: 24px;
+      font-size: 27px;
     }
 
     p {
       font-weight: 300;
-      font-size: 15px;
+      font-size: 17px;
     }
 }
 
 .functioning {
 
+  h2 {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  @media screen and (max-width: 600px) {
+    h2 {
+      text-align: left;
+      margin: 60px 0 30px 20px;
+    }
+  }
+
       &__container {
         display: flex;
-        flex-direction: column;
-        margin: 20px 20px 30px 20px;
+        flex-direction: row;
+        justify-content: space-between;
+        margin: 20px 20px 30px 30px;
 
-        h2 {
-          margin-bottom: 30px;
+        @media screen and (min-width: 600px) and (max-width: 1220px) {
+          margin: 20px 10px 30px 20px;
+        }
+
+        @media screen and (max-width: 600px) {
+          flex-direction: column;
+          margin: 0 10px 20px 20px
+
         }
       }
 
@@ -36,13 +55,29 @@
         display: flex;
         align-items: center;
         border-radius: 25px;
-        padding: 10px 0 10px 0;
         background-color: #f6f6f6;
-        margin-bottom: 30px;
         box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+        padding: 15px 50px 15px 0;
+        margin: 30px 40px;
+        flex: 1;
+
+        @media screen and (min-width: 600px) and (max-width: 1220px) {
+          padding: 15px 15px 15px 0;
+          margin: 30px 15px;
+        }
+
+        @media screen and (max-width: 600px) {
+          justify-content: left;
+          padding: 10px 0 10px 0;
+          margin: 0 10px 30px 10px;
+        }
 
         &:hover{
           background-color: rgba(147,86,220,0.20);
+
+          i {
+            color: #9356DC;
+          }
         }
 
           &__number{
@@ -57,13 +92,13 @@
           }
 
         i {
-          padding-right: 25px;
+          padding-right: 20px;
           padding-left: 20px;
           font-size: 18px;
           color: #7e7e7e;
 
-          &:hover{
-            color: #9356DC;
+          @media screen and (min-width: 600px) and (max-width: 1220px) {
+            padding-right: 15px;
           }
         }
 
@@ -76,13 +111,45 @@
 
 .restaurants {
   background-color: #f6f6f6;
-  padding: 40px 20px 40px 20px;
+  padding: 30px;
+
+  @media screen and (max-width: 600px) {
+    padding: 40px 20px 40px 20px;
+  }
+
+  h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    margin-top: 0;
+  }
+
+  @media screen and (max-width: 600px) {
+    h2 {
+      text-align: left;
+      margin: 30px 0 30px 0;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 25px;
+
+    @media screen and (max-width: 600px) {
+      flex-direction: column;
+    }
+  }
 
     &__card {
       background-color: white;
       box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
       border-radius: 15px;
-      margin-bottom: 20px;
+      flex: 1;
+
+      @media screen and (min-width: 600px) and (max-width: 1220px) {
+        min-width: 370px;
+      }
 
 
         img {
@@ -102,10 +169,12 @@
 
         h3 {
           font-size: 18px;
+          font-weight: bold;
         }
 
         p, h3 {
           margin: 5px;
+          font-size: 17px;
         }
 
         i {
@@ -120,9 +189,13 @@
       text-align: center;
       padding: 6px 10px;
       position: absolute;
-      right: 20px;
       margin: 15px;
       font-size: 14px;
+      font-weight: bold;
+
+      @media screen and (max-width: 600px) {
+        right: 20px;
+      }
   }
 }
 
