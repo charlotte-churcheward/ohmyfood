@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" xml:lang="fr" xmlns="http://www.w3.org/1999/xhtml">
+<html lang="fr" xml:lang="fr" xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
 
 <head>
     <meta charset="UTF-8" />
@@ -15,7 +15,7 @@
         <div class="logo"><img src="images/logo/ohmyfood.png" alt="#" /></div>
         <div class="location">
             <i class="fa-solid fa-location-dot"></i>
-            <span>Paris, Belleville</span>
+            <input type="text" value="Paris, Belleville"/>
         </div>
     </nav>
 </header>
@@ -25,36 +25,36 @@
     <section class="reservation">
         <h1>Réservez le menu qui vous convient</h1>
         <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-        <button class="reservation__button" type="submit"><span>Explorer nos restaurants</span></button>
+        <a href="#restaurants"><button class="reservation__button" type="submit"><span>Explorer nos restaurants</span></button></a>
     </section>
 
     <section class="functioning">
 
         <div class="functioning__container">
 
-            <h1>Fonctionnement</h1>
+            <h2>Fonctionnement</h2>
 
             <div class="functioning__card">
                 <div class="functioning__card__number"><span>1</span></div>
                 <i class="fa-solid fa-mobile-screen"></i>
-                <p><strong>Choisissez un restaurant</strong></p>
+                <p>Choisissez un restaurant</p>
             </div>
             <div class="functioning__card">
                 <div class="functioning__card__number"><span>2</span></div>
                 <i class="fa-solid fa-bars"></i>
-                <p><strong>Composez votre menu</strong></p>
+                <p>Composez votre menu</p>
             </div>
             <div class="functioning__card">
                 <div class="functioning__card__number"><span>3</span></div>
                 <i class="fa-solid fa-store"></i>
-                <p><strong>Dégustez au restaurant</strong></p>
+                <p>Dégustez au restaurant</p>
             </div>
 
         </div>
     </section>
 
-    <section class="restaurants">
-        <h1>Restaurants</h1>
+    <section id="restaurants" class="restaurants">
+        <h2>Restaurants</h2>
 
         <div class="restaurants__container">
 
@@ -64,7 +64,7 @@
                 <div class="restaurants__content">
                     <div class="content__text"><h3>La palette du goût</h3>
                         <p>Ménilmontant</p></div>
-                    <i class="fa-solid fa-heart"></i></div>
+                    <i class="fa-regular fa-heart"></i></div>
             </a></div>
 
             <div class="restaurants__card"><a href="menu2.html">
@@ -73,7 +73,7 @@
                 <div class="restaurants__content">
                     <div class="content__text"><h3>La note enchantée</h3>
                 <p>Charonne</p></div>
-                <i class="fa-solid fa-heart"></i></div>
+                    <i class="fa-regular fa-heart"></i></div>
             </a></div>
 
             <div class="restaurants__card"><a href="menu3.html">
@@ -81,7 +81,7 @@
                 <div class="restaurants__content">
                     <div class="content__text"><h3>À la française</h3>
                         <p>Cité Rouge</p></div>
-                    <i class="fa-solid fa-heart"></i></div>
+                    <i class="fa-regular fa-heart"></i></div>
             </a></div>
 
             <div class="restaurants__card"><a href="menu4.html">
@@ -89,7 +89,7 @@
                 <div class="restaurants__content">
                     <div class="content__text"><h3>Le délice des sens</h3>
                         <p>Folie-Méricourt</p></div>
-                    <i class="fa-solid fa-heart"></i></div>
+                    <i class="fa-regular fa-heart"></i></div>
             </a></div>
 
         </div>
@@ -100,10 +100,10 @@
     <div class="footer__logo"><p>ohmyfood<p></p></div>
 
     <ul class="footer__info">
-        <li><i class="fa-solid fa-utensils"></i>Proposer un restaurant</li>
-        <li><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</li>
-        <li>Mentions légales</li>
-        <li>Contact</li>
+        <li><i class="fa-solid fa-utensils"></i><a href="#">Proposer un restaurant</a></li>
+        <li><i class="fa-solid fa-handshake-angle"></i><a href="#">Devenir partenaire</a></li>
+        <li><a href="#">Mentions légales</a></li>
+        <li><a href="#">Contact</a></li>
     </ul>
 
 </footer>
