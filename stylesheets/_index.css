@@ -379,6 +379,8 @@ strong {
   transition: opacity 350ms ease-in 150ms;
   background-image: linear-gradient(25deg, #ff79da, #9356dc);
   background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
   color: transparent;
 }
 
@@ -396,19 +398,32 @@ strong {
 
 footer {
   background-color: #353535;
-  padding: 10px 0 15px 20px;
+  padding: 10px 0 15px 40px;
   color: white;
+}
+@media screen and (max-width: 600px) {
+  footer {
+    padding-left: 20px;
+  }
+}
+footer img {
+  margin-top: 20px;
+  width: 110px;
+  filter: invert(1);
 }
 footer p {
   font-family: "Shrikhand", sans-serif, serif;
 }
 footer ul {
   display: flex;
-  flex-direction: column;
   padding: 0;
+  gap: 25px;
 }
-footer ul li {
-  margin-bottom: 5px;
+@media screen and (max-width: 600px) {
+  footer ul {
+    flex-direction: column;
+    gap: 7px;
+  }
 }
 footer ul li > a {
   color: white;
@@ -491,32 +506,68 @@ button:hover {
 }
 .reservation h1 {
   padding-top: 35px;
-  font-size: 24px;
+  font-size: 27px;
 }
 .reservation p {
   font-weight: 300;
-  font-size: 15px;
+  font-size: 17px;
 }
 
+.functioning h2 {
+  text-align: center;
+  margin-top: 50px;
+}
+@media screen and (max-width: 600px) {
+  .functioning h2 {
+    text-align: left;
+    margin: 60px 0 30px 20px;
+  }
+}
 .functioning__container {
   display: flex;
-  flex-direction: column;
-  margin: 20px 20px 30px 20px;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 20px 20px 30px 30px;
 }
-.functioning__container h2 {
-  margin-bottom: 30px;
+@media screen and (min-width: 600px) and (max-width: 1220px) {
+  .functioning__container {
+    margin: 20px 10px 30px 20px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .functioning__container {
+    flex-direction: column;
+    margin: 0 10px 20px 20px;
+  }
 }
 .functioning__card {
   display: flex;
   align-items: center;
   border-radius: 25px;
-  padding: 10px 0 10px 0;
   background-color: #f6f6f6;
-  margin-bottom: 30px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 15px 50px 15px 0;
+  margin: 30px 40px;
+  flex: 1;
+}
+@media screen and (min-width: 600px) and (max-width: 1220px) {
+  .functioning__card {
+    padding: 15px 15px 15px 0;
+    margin: 30px 15px;
+  }
+}
+@media screen and (max-width: 600px) {
+  .functioning__card {
+    justify-content: left;
+    padding: 10px 0 10px 0;
+    margin: 0 10px 30px 10px;
+  }
 }
 .functioning__card:hover {
   background-color: rgba(147, 86, 220, 0.2);
+}
+.functioning__card:hover i {
+  color: #9356DC;
 }
 .functioning__card__number {
   width: 30px;
@@ -529,13 +580,15 @@ button:hover {
   margin-left: -13px;
 }
 .functioning__card i {
-  padding-right: 25px;
+  padding-right: 20px;
   padding-left: 20px;
   font-size: 18px;
   color: #7e7e7e;
 }
-.functioning__card i:hover {
-  color: #9356DC;
+@media screen and (min-width: 600px) and (max-width: 1220px) {
+  .functioning__card i {
+    padding-right: 15px;
+  }
 }
 .functioning__card p {
   font-weight: bold;
@@ -544,13 +597,45 @@ button:hover {
 
 .restaurants {
   background-color: #f6f6f6;
-  padding: 40px 20px 40px 20px;
+  padding: 30px;
+}
+@media screen and (max-width: 600px) {
+  .restaurants {
+    padding: 40px 20px 40px 20px;
+  }
+}
+.restaurants h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  margin-top: 0;
+}
+@media screen and (max-width: 600px) {
+  .restaurants h2 {
+    text-align: left;
+    margin: 30px 0 30px 0;
+  }
+}
+.restaurants__container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 25px;
+}
+@media screen and (max-width: 600px) {
+  .restaurants__container {
+    flex-direction: column;
+  }
 }
 .restaurants__card {
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1);
   border-radius: 15px;
-  margin-bottom: 20px;
+  flex: 1;
+}
+@media screen and (min-width: 600px) and (max-width: 1220px) {
+  .restaurants__card {
+    min-width: 370px;
+  }
 }
 .restaurants__card img {
   width: 100%;
@@ -567,9 +652,11 @@ button:hover {
 }
 .restaurants__content h3 {
   font-size: 18px;
+  font-weight: bold;
 }
 .restaurants__content p, .restaurants__content h3 {
   margin: 5px;
+  font-size: 17px;
 }
 .restaurants__content i {
   font-size: 22px;
@@ -581,22 +668,40 @@ button:hover {
   text-align: center;
   padding: 6px 10px;
   position: absolute;
-  right: 20px;
   margin: 15px;
   font-size: 14px;
+  font-weight: bold;
+}
+@media screen and (max-width: 600px) {
+  .restaurants__insert {
+    right: 20px;
+  }
 }
 
 .menu {
   background-color: #eaeaea;
   border-radius: 40px 40px 0 0;
   position: relative;
-  padding: 40px 15px;
+  padding: 40px;
+}
+@media screen and (max-width: 600px) {
+  .menu {
+    padding: 40px 15px;
+  }
 }
 .menu__restaurant {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
+  gap: 20px;
+}
+@media screen and (max-width: 600px) {
+  .menu__restaurant {
+    justify-content: space-between;
+    gap: 0;
+    padding-bottom: 20px;
+  }
 }
 .menu__restaurant h1 {
   margin: 0 0 0 5px;
@@ -604,13 +709,26 @@ button:hover {
 }
 .menu__restaurant .fa-heart {
   font-size: 23px;
-  padding-right: 20px;
+  margin-right: 20px;
+}
+.menu__container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+}
+@media screen and (max-width: 1220px) {
+  .menu__container {
+    flex-direction: column;
+    gap: 15px;
+  }
 }
 .menu__courses {
-  margin-bottom: 45px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 .menu__title {
-  width: 45px;
+  width: 40px;
   border-bottom: 3px solid #99E2D0;
   margin-bottom: 15px;
   margin-left: 5px;
@@ -654,16 +772,14 @@ button:hover {
   background-color: #99E2D0;
   align-items: center;
   overflow: hidden;
-  transition: all 1250ms ease-out;
-  opacity: 0;
+  transition: width 600ms;
   transform-origin: right;
 }
 .menu__card:hover .menu__card--check {
   width: 75px;
-  opacity: 1;
 }
 .menu__card:hover i {
-  transition: transform 1500ms;
+  transition: transform 600ms;
   transform: rotate(360deg);
 }
 .menu__content {
@@ -682,21 +798,22 @@ button:hover {
   text-overflow: ellipsis;
 }
 .menu__content h3 {
-  font-size: 17px;
+  font-size: 18px;
 }
 .menu__content p {
-  font-size: 14px;
+  font-size: 15px;
+  font-weight: 300;
 }
 .menu__text {
   overflow: hidden;
   text-overflow: ellipsis;
 }
 .menu__price {
-  font-weight: bold;
   padding-right: 10px;
 }
 .menu__price p {
   margin-bottom: 5px;
+  font-weight: bold;
 }
 
 .card1 {
