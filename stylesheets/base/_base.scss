@@ -41,6 +41,9 @@ strong {
       transition: opacity 350ms ease-in 150ms;
       background-image: linear-gradient(25deg, #ff79da, #9356dc);
       background-clip: text;
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+
       color: transparent;
     }
 }
