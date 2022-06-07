@@ -1,3 +1,15 @@
+//Colors
+
 $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
+$color-light-grey: #f6f6f6;
+$color-grey: #eaeaea;
+$color-dark-grey: #7e7e7e;
+$color-primary-light: lighten($color-primary, 35%);
+$color-tertiary-dark: darken($color-tertiary, 40%);
+$color-footer: #353535;
+
+// Shadows
+$box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+$box-shadow-darker: 0 4px 8px 0 rgba(0,0,0,0.2);
