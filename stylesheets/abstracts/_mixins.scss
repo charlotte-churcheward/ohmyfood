@@ -1,7 +1,30 @@
+@use "../abstracts/variables" as *;
+
 @mixin d-flex {
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-@mixin button-colour ($color: $color-primary) {
-  background: $color lighten($color, 10%);
+@mixin d-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin button {
+  background: linear-gradient($color-secondary, $color-primary);
+  border-radius: 30px;
+  border: none;
+  color: white;
+  padding: 15px 20px 15px 20px;
+  box-shadow: $box-shadow;
+  margin: 30px auto;
+  transition: all 400ms ease-out 120ms;
+  cursor: pointer;
+}
+
+@mixin button-hover {
+  opacity: 0.9;
+  box-shadow: $box-shadow-darker;
 }
