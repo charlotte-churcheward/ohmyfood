@@ -1,5 +1,7 @@
+@use "../abstracts/variables" as *;
+
 footer {
-  background-color: #353535;
+  background-color: $color-footer;
   padding: 10px 0 15px 40px;
   color: white;
 
@@ -7,17 +9,17 @@ footer {
     padding-left: 20px;
   }
 
-      img {
-        margin-top: 20px;
-        width: 110px;
-        filter: invert(1);
-      }
+  img {
+    margin-top: 20px;
+    width: 110px;
+    filter: invert(1);
+  }
 
-    p {
+  p {
     font-family: "Shrikhand", sans-serif, serif;
-    }
+  }
 
-    ul {
+  ul {
     display: flex;
     padding: 0;
     gap: 25px;
