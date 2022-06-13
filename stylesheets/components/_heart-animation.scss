@@ -2,7 +2,6 @@
 
 .fa-heart{
   position: relative;
-  z-index: 1;
   cursor: pointer;
 
   &:hover {
@@ -15,9 +14,7 @@
     content: "\f004";
     font-weight: 600;
     position: absolute;
-    right: 0;
     left: 0;
-    z-index: 2;
     opacity: 0;
     transition: opacity 350ms ease-in 150ms;
     background-image: linear-gradient(25deg, $color-secondary, $color-primary);
