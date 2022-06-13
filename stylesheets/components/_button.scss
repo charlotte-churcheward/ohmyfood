@@ -3,22 +3,8 @@
 
 .button {
     @include button;
-        text-align: center;
-        display: block;
-        width: 225px;
 
     &:hover {
         @include button-hover;
     }
   }
-
-.menu__button {
-    @include button;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    &:hover {
-        @include button-hover;
-    }
-}
