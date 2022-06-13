@@ -13,18 +13,43 @@
 }
 
 @mixin button {
-  background: linear-gradient($color-secondary, $color-primary);
+  background: $gradient;
   border-radius: 30px;
   border: none;
   color: white;
-  padding: 15px 20px 15px 20px;
+  padding: 15px 0;
   box-shadow: $box-shadow;
-  margin: 30px auto;
+  margin: 20px auto 30px auto;
   transition: all 400ms ease-out 120ms;
   cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 200px;
+  font-size: 15px;
 }
 
 @mixin button-hover {
   opacity: 0.9;
   box-shadow: $box-shadow-darker;
+}
+
+// Media Queries
+
+@mixin mobile-only {
+  @media screen and (max-width: map-get($breakpoints, mobile)){
+      @content;
+  }
+}
+
+@mixin tablet-only {
+  @media screen and (min-width: map-get($breakpoints, mobile)) and (max-width: map-get($breakpoints, desktop)) {
+    @content;
+  }
+}
+
+@mixin desktop-only {
+  @media screen and (max-width: map-get($breakpoints, desktop)){
+    @content;
+  }
 }
