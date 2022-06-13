@@ -5,10 +5,10 @@
   background-color: $color-light-grey;
   border-radius: 40px 40px 0 0;
   position: relative;
-  padding: 40px;
+  padding: 45px;
 
-  @media screen and (max-width: 600px) {
-    padding: 40px 15px;
+  @include mobile-only {
+    padding: 45px 15px;
   }
 
   &__restaurant {
@@ -17,7 +17,7 @@
     padding-bottom: 30px;
     gap: 20px;
 
-    @media screen and (max-width: 600px) {
+    @include mobile-only {
       justify-content: space-between;
       gap: 0;
       padding-bottom: 20px;
@@ -37,8 +37,9 @@
   &__container {
     @include d-flex;
     gap: 40px;
+    margin-bottom: 30px;
 
-    @media screen and (max-width: 1220px) {
+    @include desktop-only {
       flex-direction: column;
       gap: 15px;
     }
@@ -76,18 +77,6 @@
     animation: loading-cards 1700ms;
     animation-fill-mode: backwards;
 
-    @keyframes loading-cards {
-      0% {
-        transform: translateY(15px);
-        opacity: 0;
-      }
-
-      100% {
-        transform: translateY(0px);
-        opacity: 1;
-      }
-    }
-
     &--check {
       @include d-flex-center;
       color: white;
@@ -99,18 +88,17 @@
       align-items: center;
       overflow: hidden;
       transition: width 600ms;
-      transform-origin: right;
     }
 
     &:hover .menu__card--check {
       width: 75px;
     }
 
-      &:hover i {
+    &:hover i {
         transition: transform 600ms;
         transform: rotate(360deg);
       }
-    }
+  }
 
   &__content {
     @include d-flex;
@@ -135,8 +123,6 @@
       font-size: 15px;
       font-weight: 300;
     }
-
-
   }
 
   &__text {
@@ -151,7 +137,18 @@
         margin-bottom: 5px;
         font-weight: bold;
       }
+  }
+}
 
+@keyframes loading-cards {
+  0% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
   }
 }
 
