@@ -1,3 +1,5 @@
+@use "../abstracts/variables" as *;
+
 nav {
   padding: 25px 0 10px 0;
   text-align: center;
@@ -15,13 +17,13 @@ nav {
 
     .location {
       margin-top: 10px;
-      background-color: #eaeaea;
+      background-color: $color-grey;
       text-align: center;
       padding: 15px;
 
       input {
         outline: none;
-        background-color: #eaeaea;
+        background-color: $color-grey;
         border: none;
         text-align: center;
         width: 145px;
