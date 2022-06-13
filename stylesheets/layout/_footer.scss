@@ -1,11 +1,12 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 footer {
   background-color: $color-footer;
   padding: 10px 0 15px 40px;
   color: white;
 
-  @media screen and (max-width: 600px) {
+  @include mobile-only {
     padding-left: 20px;
   }
 
@@ -24,7 +25,7 @@ footer {
     padding: 0;
     gap: 25px;
 
-    @media screen and (max-width: 600px) {
+    @include mobile-only {
       flex-direction: column;
       gap: 7px;
     }
